@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class SocketCliente {
 
-	public static final int PUERTO = 2017;
+	public static final int PUERTO = 2022;
 	public static final String IP_SERVER = "192.168.22.136";
 
 	public static void main(String[] args) {
@@ -32,8 +32,8 @@ public class SocketCliente {
 			while (cerramos) {
 				System.out.println("Menú calculadora: \n"+"1. Sumar \n"+"2. Restar \n"+"3. Multiplicar \n"+"4. Dividir \n"+"5. Salir \n");
 				System.out.print("Introduzca la opción deseada: ");
-				int opcion = sc.nextInt();
-				switch (opcion) {
+				String opcion = sc.nextLine();
+				switch (Integer.parseInt(opcion)) {
 				case 1:
 					socketAlServidor = new Socket();
 					System.out.println("CLIENTE: Introduzca los numeros a sumar");
