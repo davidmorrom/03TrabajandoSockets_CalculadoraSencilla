@@ -16,7 +16,7 @@ public class SocketCliente {
 	public static final String IP_SERVER = "192.168.22.136";
 
 	public static void main(String[] args) {
-		System.out.println("        APLICACI�N CLIENTE         ");
+		System.out.println("        APLICACIÓN CLIENTE         ");
 		System.out.println("-----------------------------------");
 		InetSocketAddress direccionServidor = new InetSocketAddress(IP_SERVER, PUERTO);
 		Socket socketAlServidor;
@@ -30,6 +30,8 @@ public class SocketCliente {
 		boolean cerramos = true;
 		try (Scanner sc = new Scanner(System.in)) {
 			while (cerramos) {
+				System.out.println("Menú calculadora: \n"+"1. Sumar \n"+"2. Restar \n"+"3. Multiplicar \n"+"4. Dividir \n"+"5. Salir \n");
+				System.out.print("Introduzca la opción deseada: ");
 				int opcion = sc.nextInt();
 				switch (opcion) {
 				case 1:
