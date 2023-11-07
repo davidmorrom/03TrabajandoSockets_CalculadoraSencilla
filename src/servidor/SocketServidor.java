@@ -73,6 +73,7 @@ public class SocketServidor {
 					socketAlCliente.close();
 					break;
 				default:
+					socketAlCliente.close();
 					break;
 				}
 
