@@ -24,7 +24,6 @@ public class SocketServidor {
 		InetSocketAddress direccion = new InetSocketAddress(PUERTO);
 		
 		try (ServerSocket serverSocket = new ServerSocket()) {
-			// que hayamos establecido
 			serverSocket.bind(direccion);
 			int peticion = 0;
 			while (true) {
