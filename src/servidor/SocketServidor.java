@@ -10,7 +10,7 @@ import java.net.Socket;
 
 public class SocketServidor {
 
-	public static final int PUERTO = 2017;
+	public static final int PUERTO = 2022;
 
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("      APLICACIÓN DE SERVIDOR      ");
@@ -77,9 +77,9 @@ public class SocketServidor {
 				String[] operadores = stringRecibido.split(";");
 				int opcion = Integer.parseInt(operadores[0]);
 				String[] numeros = operadores[1].split("-");
-				int iNumero1 = Integer.parseInt(numeros[0]);
-				int iNumero2 = Integer.parseInt(numeros[1]);
-				int resultado;
+				double iNumero1 = Double.parseDouble(numeros[0]);
+				double iNumero2 = Double.parseDouble(numeros[1]);
+				double resultado;
 
 				// Hay que tener en cuenta que es posible que los servidores tarden en responder
 				// Thread.sleep(15000);

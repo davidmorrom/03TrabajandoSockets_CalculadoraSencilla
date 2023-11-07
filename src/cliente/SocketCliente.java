@@ -28,9 +28,8 @@ public class SocketCliente {
 		BufferedReader bf;
 		String resultado;
 		boolean cerramos = true;
-		while (cerramos) {
-			try (Scanner sc = new Scanner(System.in)) {
-
+		try (Scanner sc = new Scanner(System.in)) {
+			while (cerramos) {
 				int opcion = sc.nextInt();
 				switch (opcion) {
 				case 1:
@@ -111,17 +110,17 @@ public class SocketCliente {
 					break;
 
 				}
-			} catch (UnknownHostException e) {
-				System.err.println("CLIENTE: No encuentro el servidor en la dirección" + IP_SERVER);
-				e.printStackTrace();
-			} catch (IOException e) {
-				System.err.println("CLIENTE: Error de entrada/salida");
-				e.printStackTrace();
-			} catch (Exception e) {
-				System.err.println("CLIENTE: Error -> " + e);
-				e.printStackTrace();
 			}
+		} catch (UnknownHostException e) {
+			System.err.println("CLIENTE: No encuentro el servidor en la dirección" + IP_SERVER);
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.err.println("CLIENTE: Error de entrada/salida");
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.err.println("CLIENTE: Error -> " + e);
+			e.printStackTrace();
 		}
-
 	}
+
 }
